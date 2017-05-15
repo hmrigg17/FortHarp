@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{4F7F0FD8-BA4E-6612-C7C7-DA91F8491017}") = "FortHarp", "Assembly-CSharp.csproj", "{73E953FE-7B08-B662-BF24-3B71CAEB38E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E953FE-7B08-B662-BF24-3B71CAEB38E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E953FE-7B08-B662-BF24-3B71CAEB38E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E953FE-7B08-B662-BF24-3B71CAEB38E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E953FE-7B08-B662-BF24-3B71CAEB38E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
