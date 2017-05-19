@@ -4,31 +4,28 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	// Public Variables
-	// The map to load when the game starts
-	public GameObject initialMap;
-
-	// The UI to load when the game starts
-	public GameObject initialUI;
-
-	// The instance of the player
-	public GameObject player;
-
+	public GameObject initialMap; // The map to load when the game starts
+	public GameObject initialUI; // The UI to load when the game starts
+	public GameObject player; // The instance of the player
 
 	// Public Static Variables
-	// Whether or not the player has direct control of the character
-	public static bool playerHasControl;
-
+	public static bool playerHasControl; // Whether or not the player has direct control of the character
+	public static GameController instance = null;
 
 	// Private Static Variables
-	// The instance of the currently loaded map
-	private static GameObject currentMap;
-
-	// The instance of the currently loaded UI
-	private static GameObject currentPlayer;
+	private static GameObject currentMap; // The instance of the currently loaded map
+	private static GameObject currentPlayer; // The instance of the currently loaded UI
 
 
 	// Unity Callbacks
 	void Start () {
+		// the following block was borrowed from the 2D Rogue-like Tutorial on Unity's website
+		// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial]
+		if (instance == null)
+			instance = this;
+		else if (instance != this)
+			Destroy (gameObject);
+		
 		currentMap = Instantiate(initialMap, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
 		currentPlayer = player;
 		playerHasControl = true;

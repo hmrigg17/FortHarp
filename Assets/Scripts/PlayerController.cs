@@ -4,17 +4,14 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	// Public Variables
-	// The speed at which the player moves
-	public float moveSpeed;
+	public float moveSpeed; // The speed at which the player moves
 
 
 	// Private Variables
-	// The instance of the rigidbody for the player
-	private Rigidbody2D rb;
+	private Rigidbody2D rb; // The instance of the rigidbody for the player
 
 	void Start () {
-		// Get the player's rigidbody component
-		rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>(); // Get the player's rigidbody component
 	}
 	
 	void FixedUpdate () {

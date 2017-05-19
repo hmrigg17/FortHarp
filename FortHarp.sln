@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{4F7F0FD8-BA4E-6612-C7C7-DA91F8491017}") = "FortHarp", "Assembly-CSharp.csproj", "{73E953FE-7B08-B662-BF24-3B71CAEB38E5}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortHarp", "Assembly-CSharp.csproj", "{73E953FE-7B08-B662-BF24-3B71CAEB38E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
