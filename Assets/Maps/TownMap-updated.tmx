@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="16" height="16" tilewidth="128" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="Ground" tilewidth="128" tileheight="128" tilecount="20" columns="4">
+  <image source="Ground Tiles.png" width="512" height="640"/>
+ </tileset>
+ <tileset firstgid="21" name="Buildings" tilewidth="128" tileheight="128" tilecount="48" columns="6">
+  <image source="town3.png" width="768" height="1024"/>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object id="2" x="56" y="72" width="73" height="56"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="74" width="71" height="54"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="1" x="15" y="76" width="113" height="51"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="78" width="108" height="51"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="3" x="0" y="-1" width="128" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="124" height="50"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="2" x="57" y="0" width="70" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-1" width="67" height="53"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="1" x="22" y="1" width="106" height="46"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="2" x="-1" y="1" width="104" height="45"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object id="3" x="12" y="77" width="115" height="53"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="92" width="116" height="37"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object id="1" x="44" y="65" width="84" height="61"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="49" width="128" height="80"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object id="1" x="65" y="78" width="61" height="50"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="87" width="28" height="40"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object id="2" x="26" y="-2" width="102" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="1" x="4" y="50" width="2"/>
+    <object id="2" x="0" y="0" width="119" height="50"/>
+   </objectgroup>
+  </tile>
+  <tile id="20">
+   <objectgroup draworder="index">
+    <object id="1" x="45" y="1" width="82" height="59"/>
+   </objectgroup>
+  </tile>
+  <tile id="21">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-2" width="124" height="63"/>
+   </objectgroup>
+  </tile>
+  <tile id="22">
+   <objectgroup draworder="index">
+    <object id="1" x="77" y="0" width="51" height="45"/>
+    <object id="2" x="76" y="2" width="52" height="44"/>
+   </objectgroup>
+  </tile>
+  <tile id="23">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-1" width="56" height="47"/>
+   </objectgroup>
+  </tile>
+  <tile id="24">
+   <objectgroup draworder="index">
+    <object id="1" x="87" y="77" width="40" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="25">
+   <objectgroup draworder="index">
+    <object id="2" x="-1" y="75" width="44" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="26">
+   <objectgroup draworder="index">
+    <object id="1" x="99" y="88" width="28" height="40"/>
+   </objectgroup>
+  </tile>
+  <tile id="27">
+   <objectgroup draworder="index">
+    <object id="2" x="-2" y="72" width="58" height="56"/>
+   </objectgroup>
+  </tile>
+  <tile id="28">
+   <objectgroup draworder="index">
+    <object id="1" x="81" y="76" width="47" height="53"/>
+   </objectgroup>
+  </tile>
+  <tile id="29">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="75" width="44" height="53"/>
+   </objectgroup>
+  </tile>
+  <tile id="30">
+   <objectgroup draworder="index">
+    <object id="2" x="91" y="-1" width="38" height="46"/>
+   </objectgroup>
+  </tile>
+  <tile id="31">
+   <objectgroup draworder="index">
+    <object id="2" x="1" y="-3" width="32" height="49"/>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index">
+    <object id="1" x="66" y="2" width="63" height="44"/>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <objectgroup draworder="index">
+    <object id="2" x="-1" y="-2" width="49" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="34">
+   <objectgroup draworder="index">
+    <object id="1" x="94" y="2" width="34" height="42"/>
+   </objectgroup>
+  </tile>
+  <tile id="35">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-1" width="37" height="46"/>
+   </objectgroup>
+  </tile>
+  <tile id="36">
+   <objectgroup draworder="index">
+    <object id="1" x="84" y="74" width="43" height="54"/>
+   </objectgroup>
+  </tile>
+  <tile id="37">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="78" width="45" height="51"/>
+   </objectgroup>
+  </tile>
+  <tile id="38">
+   <objectgroup draworder="index">
+    <object id="1" x="68" y="65" width="61" height="62"/>
+   </objectgroup>
+  </tile>
+  <tile id="39">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="75" width="31" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index">
+    <object id="1" x="91" y="1" width="37" height="45"/>
+   </objectgroup>
+  </tile>
+  <tile id="43">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="-1" width="35" height="51"/>
+   </objectgroup>
+  </tile>
+  <tile id="44">
+   <objectgroup draworder="index">
+    <object id="1" x="69" y="0" width="57" height="44"/>
+   </objectgroup>
+  </tile>
+  <tile id="45">
+   <objectgroup draworder="index">
+    <object id="2" x="-1" y="1" width="23" height="41"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="69" name="Town Center" tilewidth="128" tileheight="128" tilecount="16" columns="4">
+  <image source="town4 (2).png" width="512" height="512"/>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="1" x="79" y="76" width="48" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="46" width="127" height="83"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="3" x="0" y="48" width="130" height="80"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="76" width="54" height="52"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="1" x="79" y="2" width="48" height="63"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="0" width="126" height="67"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="0" width="125" height="69"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-2" width="44" height="69"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="85" name="Trees" tilewidth="100" tileheight="100" tilecount="13" columns="0">
+  <tile id="0">
+   <image width="100" height="100" source="tree9_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="-4" y="-1" width="98" height="99"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <image width="100" height="100" source="tree10_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="2" y="0" width="97" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <image width="100" height="100" source="tree5_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="14" y="7" width="80" height="92"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <image width="100" height="100" source="tree6_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="95" height="101"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <image width="100" height="100" source="tree2_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="3" width="97" height="97"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <image width="100" height="100" source="tree2.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="4" width="96" height="97"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <image width="100" height="100" source="tree1.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="4" y="3" width="88" height="98"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <image width="100" height="100" source="shrub3.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="2" y="13" width="93" height="88"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <image width="100" height="100" source="shrub4.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="7" y="2" width="89" height="99"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <image width="100" height="100" source="tree3_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="-3" y="3" width="107" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <image width="100" height="100" source="tree3_dark.png"/>
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="6" width="98" height="94"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <image width="100" height="100" source="flower1.png"/>
+  </tile>
+  <tile id="12">
+   <image width="100" height="100" source="flower2.png"/>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="16" height="16">
+  <data encoding="csv">
+6,1,1,4,5,5,3,2,6,6,4,3,4,2,6,6,
+4,2,8,8,8,8,8,8,8,8,8,8,8,8,3,5,
+2,5,11,13,13,13,13,13,13,13,13,13,13,13,1,2,
+4,4,11,10,14,14,14,14,14,14,14,14,10,12,3,5,
+2,2,11,12,6,5,2,5,1,6,2,4,11,12,6,4,
+2,1,11,12,2,3,6,5,6,2,1,6,11,12,3,1,
+8,8,11,12,6,8,2,5,3,8,8,1,11,12,8,8,
+13,13,10,10,13,13,13,13,13,13,13,13,10,10,13,13,
+14,14,14,14,10,10,14,14,14,14,10,10,14,14,14,14,
+5,5,1,6,11,12,4,6,3,1,11,12,4,4,4,1,
+3,6,2,1,11,12,6,2,15,15,11,12,15,15,15,1,
+2,5,5,1,11,12,6,6,15,15,11,12,2,2,2,6,
+2,6,5,3,11,12,1,3,3,5,11,12,1,5,3,4,
+5,3,3,6,11,12,6,4,3,4,11,12,4,5,3,4,
+1,6,2,4,11,12,1,1,6,1,11,12,5,2,3,2,
+2,3,1,1,11,12,5,4,2,3,11,12,5,1,4,2
+</data>
+ </layer>
+ <layer name="Trees" width="16" height="16">
+  <data encoding="csv">
+86,86,85,93,86,93,92,94,93,87,87,93,92,95,85,85,
+93,0,0,0,0,0,0,92,0,0,0,0,0,92,0,93,
+92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,
+93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,
+89,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,
+89,0,0,0,0,0,0,0,0,0,0,85,0,0,0,89,
+0,0,0,0,87,0,0,87,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+87,87,0,0,0,0,0,0,85,85,0,0,0,0,88,87,
+93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,
+93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,
+88,0,0,91,0,0,0,0,0,0,0,0,0,0,0,85,
+90,0,0,0,0,0,91,0,0,0,0,0,0,0,0,89,
+86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,
+87,95,90,91,0,0,90,91,92,88,0,0,85,85,89,92
+</data>
+ </layer>
+ <layer name="Buildings" width="16" height="16">
+  <data encoding="csv">
+0,0,45,46,47,48,49,50,57,58,59,60,37,38,0,0,
+0,0,51,52,53,54,55,56,63,64,65,66,43,44,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+35,36,0,0,0,33,34,0,73,74,75,76,0,0,25,26,
+41,42,0,0,0,39,40,0,77,78,79,80,0,0,31,32,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,23,24,0,0,21,22,0,0,
+0,0,0,0,0,0,0,0,29,30,0,0,27,28,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

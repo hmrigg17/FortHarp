@@ -9,20 +9,26 @@ public class PlayerController : MonoBehaviour {
 
 	// Private Variables
 	private Rigidbody2D rb; // The instance of the rigidbody for the player
+	private static bool playerExists;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>(); // Get the player's rigidbody component
+
+
+		if (!playerExists) {
+			playerExists = true;
+			DontDestroyOnLoad (transform.gameObject);
+		} else {
+			Destroy (gameObject);
+		}
 	}
 	
-	void FixedUpdate () {
-		// If the player has control
-		if (GameController.playerHasControl) {
-			// Get the input amounts
-			float moveHorizontal = Input.GetAxis("Horizontal") * moveSpeed;
-			float moveVertical = Input.GetAxis("Vertical") * moveSpeed;
+	void Update () {
+		// Get the input amounts
+		float moveHorizontal = Input.GetAxis("Horizontal") * moveSpeed;
+		float moveVertical = Input.GetAxis("Vertical") * moveSpeed;
 
-			// Set the player's velocity to the correct move amount
-			rb.velocity = new Vector2(moveHorizontal, moveVertical);
-		}
+		// Set the player's velocity to the correct move amount
+		rb.velocity = new Vector2(moveHorizontal, moveVertical);
 	}
 }
