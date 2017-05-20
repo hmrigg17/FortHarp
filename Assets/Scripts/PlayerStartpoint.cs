@@ -10,10 +10,10 @@ public class PlayerStartpoint : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
-		camera = FindObjectOfType<CameraController> ();
+		//camera = FindObjectOfType<CameraController> ();
 
 		player.transform.position = this.transform.position;
-		camera.transform.position = this.transform.position + camera.offset;
+		//camera.transform.position = this.transform.position + camera.offset;
 	}
 	
 	// Update is called once per frame
