@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStartpoint : MonoBehaviour {
 
 	private PlayerController player;
-	private CameraController camera;
+	//private CameraController camera;
 
 	// Use this for initialization
 	void Start () {

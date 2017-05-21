@@ -9,11 +9,12 @@ public class PlayerController : MonoBehaviour {
 
 	// Private Variables
 	private Rigidbody2D rb; // The instance of the rigidbody for the player
+	private Animator anim;
 	private static bool playerExists;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>(); // Get the player's rigidbody component
-
+		anim = GetComponent<Animator>();
 
 		if (!playerExists) {
 			playerExists = true;
@@ -28,7 +29,13 @@ public class PlayerController : MonoBehaviour {
 		float moveHorizontal = Input.GetAxis("Horizontal") * moveSpeed;
 		float moveVertical = Input.GetAxis("Vertical") * moveSpeed;
 
-		// Set the player's velocity to the correct move amount
-		rb.velocity = new Vector2(moveHorizontal, moveVertical);
+		if (Input.GetAxisRaw ("Horizontal") != 0 || Input.GetAxisRaw ("Vertical") != 0)
+			rb.velocity = new Vector2 (moveHorizontal, moveVertical); // Set the player's velocity to the correct move amount
+		else
+			rb.velocity = new Vector2 (0f, 0f);
+
+		// animator controller things
+		anim.SetFloat ("MoveX", Input.GetAxisRaw ("Horizontal"));
+		anim.SetFloat ("MoveY", Input.GetAxisRaw ("Vertical"));
 	}
 }

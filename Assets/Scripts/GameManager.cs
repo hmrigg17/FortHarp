@@ -8,19 +8,17 @@ public class GameManager : MonoBehaviour {
 	// this entire script is taken from a 2D rogue-like tutorial on Unity's site
 	// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial]
 
-	public float levelStartDelay = 2f;
-	public float turnDelay = 0.1f;
+	//public float levelStartDelay = 2f;
+	//public float turnDelay = 0.1f;
 	public static GameManager instance = null;
 	public ForestManager forestScript;
-	public int playerFoodPoints = 100;
-	[HideInInspector] public bool playersTurn = true;
+	//[HideInInspector] public bool playersTurn = true;
 
-	private Text levelText;
+	//private Text levelText;
 	private GameObject levelImage;
-	private int level = 0;
 	//private List<Enemy> enemies;
-	private bool enemiesMoving;
-	private bool doingSetUp;
+	//private bool enemiesMoving;
+	//private bool doingSetUp;
 
 	void Awake () {
 
@@ -35,7 +33,7 @@ public class GameManager : MonoBehaviour {
 		InitGame ();
 	}
 
-	void OnLevelFinishedLoading (Scene scene, LoadSceneMode mode) {
+	/*void OnLevelFinishedLoading (Scene scene, LoadSceneMode mode) {
 		level++;
 		InitGame ();
 	}
@@ -46,62 +44,62 @@ public class GameManager : MonoBehaviour {
 
 	void OnDisable() {
 		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-	}
+	}*/
 
 	void InitGame() {
-		doingSetUp = true;
+		//doingSetUp = true;
 
-		levelImage = GameObject.Find ("Level Image");
-		levelText = GameObject.Find ("Level Text").GetComponent<Text> ();
-		levelText.text = "Day " + level;
-		levelImage.SetActive (true);
+		//levelImage = GameObject.Find ("Level Image");
+		//levelText = GameObject.Find ("Level Text").GetComponent<Text> ();
+		//levelText.text = "Day " + level;
+		//levelImage.SetActive (true);
 
-		Invoke ("HideLevelImage", levelStartDelay);
+		//Invoke ("HideLevelImage", levelStartDelay);
 
 		//enemies.Clear ();
-		forestScript.SetupScene (level);
+		forestScript.SetupScene ();
 
 	}
 
-	private void HideLevelImage () {
+	/*private void HideLevelImage () {
 		levelImage.SetActive (false);
-		doingSetUp = false;
-	}
+		//doingSetUp = false;
+	}*/
 
-	public void GameOver () {
+	/*public void GameOver () {
 		levelText.text = "After " + level + " days, you starved.";
 		levelImage.SetActive (true);
 		enabled = false;
 
-	}
+	}*/
 
 	// Update is called once per frame
 	void Update () {
-		if (playersTurn || enemiesMoving || doingSetUp)
+		/*if (playersTurn || enemiesMoving || doingSetUp)
 			return;
-		StartCoroutine (MoveEnemies());
+		StartCoroutine (MoveEnemies());*/
 	}
 
 	/*public void AddEnemyToList (Enemy script) {
 		enemies.Add (script);
 	}*/
 
-	IEnumerator MoveEnemies(){
+	/*IEnumerator MoveEnemies(){
 		enemiesMoving = true;
 		yield return new WaitForSeconds (turnDelay);
 
 		/*if (enemies.Count == 0) {
 			yield return new WaitForSeconds (turnDelay);
-		}*/
+		}
 
 		/*for (int i = 0; i < enemies.Count; i++) {
 			enemies [i].MoveEnemy ();
 			yield return new WaitForSeconds (enemies[i].moveTime);
-		}*/
+		}
 
 		playersTurn = true;
 		enemiesMoving = false;
 
-	}
+	}*/
 }
 

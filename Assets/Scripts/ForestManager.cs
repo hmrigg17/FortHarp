@@ -30,35 +30,46 @@ public class ForestManager : MonoBehaviour {
 	private Transform boardHolder;
 	private List<Vector3> gridPositions = new List<Vector3> ();
 
-	void InitializeList (){
+	void InitializeList (){ // initialize grid positions
 		gridPositions.Clear ();
 
-		for (int x = 0; x < columns; x++) {
-			for (int y = 0; y < rows; y++) { 
-				gridPositions.Add (new Vector3 (x, y, 0f));
+		for (int x = 2; x < columns*2; x+=2) {
+			for (int y = 2; y < rows*2; y+=2) { 
+				gridPositions.Add (new Vector3 (x, y, -2f));
+
+				//skip several tiles in the middle of the forest so that there will always be a clear path to the treehouse
+				if ((x == columns || x == (columns + 2)) && y <= rows+2)
+					gridPositions.Remove (new Vector3 (x, y, -2f));
 			}
 		}
 	}
 
 	void ForestSetUp () {
 		boardHolder = new GameObject ("ForestMap").transform;
+		GameObject toInstantiate;
 
-		for (int x = -1; x < columns + 1; x++) {
-			for (int y = -1; y < rows + 1; y++) {
-				GameObject toInstantiate = floorTiles [Random.Range (0, floorTiles.Length)];
-
-				//skip several tiles in the middle of the forest so that there will always be a clear path to the treehouse
-				if ((x==(columns/2) && x==((columns/2)+1)) || y<=((rows/2)-(rows/10)))
-					gridPositions.Remove(new Vector3(x,y,0f));
-				// else will leave a gap in the outer walls for the exit trigger
-				else if (x == -1 || x == columns || y == -1 || y == rows)
-					toInstantiate = outerWallTiles [Random.Range (0, outerWallTiles.Length)];
-
+		// generate a random floor
+		for (int x = -8; x < ((columns + 5) * 2); x += 2) {
+			for (int y = -8; y < ((rows + 5) * 2); y += 2) {
+				toInstantiate = floorTiles [Random.Range (0, floorTiles.Length)];
 				GameObject instance = Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
-
 				instance.transform.SetParent (boardHolder);
 			}
 		}
+
+		// generate random outer-walls
+		for (int x = -8; x < ((columns + 5) * 2); x += 2) {
+			for (int y = -8; y < ((rows + 5) * 2); y += 2) {
+				if (x <= -2 || x >= (columns * 2) || y <= -2 || y >= (rows * 2)) {
+					if ((x != columns && x != (columns + 2)) || y > rows + 2) { // leave a gap to leave the forest through
+						toInstantiate = outerWallTiles [Random.Range (0, outerWallTiles.Length)];
+						GameObject instance = Instantiate (toInstantiate, new Vector3 (x, y, -2f), Quaternion.identity) as GameObject;
+						instance.transform.SetParent (boardHolder);
+					}
+				}
+			}
+		}
+
 	}
 
 	Vector3 RandomPosition () { // pick a random available position in the grid, then make it unavailable
@@ -81,7 +92,7 @@ public class ForestManager : MonoBehaviour {
 		}
 	}
 
-	public void SetupScene (int level) {
+	public void SetupScene () {
 		ForestSetUp ();
 		InitializeList ();
 		LayoutObjectAtRandom (obstacleTiles, obstacleCount.minimum, obstacleCount.maximum);
