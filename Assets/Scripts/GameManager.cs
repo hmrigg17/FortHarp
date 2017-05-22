@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 	// this entire script is taken from a 2D rogue-like tutorial on Unity's site
 	// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial]
+	// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial/writing-game-manager?playlist=17150]
 
 	//public float levelStartDelay = 2f;
 	//public float turnDelay = 0.1f;

@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class ForestManager : MonoBehaviour {
 	// this entire script is taken from a 2D rogue-like tutorial on Unity's site
 	// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial]
+	// [https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial/writing-board-manager?playlist=17150]
 
 	[Serializable]
 	public class Count {
@@ -27,8 +28,17 @@ public class ForestManager : MonoBehaviour {
 	public GameObject[] obstacleTiles;
 	public GameObject[] outerWallTiles;
 
+	public static ForestManager instance = null;
+
 	private Transform boardHolder;
 	private List<Vector3> gridPositions = new List<Vector3> ();
+
+	void Awake() {
+		if (instance == null)
+			instance = this;
+		else if (instance != this)
+			Destroy (gameObject);
+	}
 
 	void InitializeList (){ // initialize grid positions
 		gridPositions.Clear ();
@@ -38,7 +48,7 @@ public class ForestManager : MonoBehaviour {
 				gridPositions.Add (new Vector3 (x, y, -2f));
 
 				//skip several tiles in the middle of the forest so that there will always be a clear path to the treehouse
-				if ((x == columns || x == (columns + 2)) && y <= rows+2)
+				if ((x == columns || x == (columns + 2)) && y <= rows+4)
 					gridPositions.Remove (new Vector3 (x, y, -2f));
 			}
 		}
@@ -88,7 +98,8 @@ public class ForestManager : MonoBehaviour {
 		for (int i = 0; i < objectCount; i++) {
 			Vector3 randomPosition = RandomPosition ();
 			GameObject tileChoice = tileArray [Random.Range (0, tileArray.Length)];
-			Instantiate (tileChoice, randomPosition, Quaternion.identity);
+			GameObject instance = Instantiate (tileChoice, randomPosition, Quaternion.identity);
+			instance.transform.SetParent (boardHolder);
 		}
 	}
 

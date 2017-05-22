@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStartpoint : MonoBehaviour {
+	// [https://www.youtube.com/watch?v=tevpiu8CW6I&list=PLiyfvmtjWC_X6e0EYLPczO9tNCkm2dzkm&index=10]
 
 	private PlayerController player;
 	//private CameraController camera;
