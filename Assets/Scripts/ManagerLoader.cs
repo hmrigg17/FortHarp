@@ -10,6 +10,7 @@ public class ManagerLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		Debug.Log ("The Manager Loader is awake.");
 		if (GameManager.instance == null)
 			Instantiate (gameManager);
 	}

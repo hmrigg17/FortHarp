@@ -26,11 +26,12 @@ public class GameManager : MonoBehaviour {
 		if (instance == null)
 			instance = this;
 		else if (instance != this)
-			Destroy (gameObject);
+			Destroy (this.gameObject);
 
 		DontDestroyOnLoad (gameObject);
 		//enemies = new List<Enemy> ();
 		forestScript = GetComponent<ForestManager> ();
+		Debug.Log ("The Game Manager is awake.");
 		InitGame ();
 	}
 
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour {
 	}*/
 
 	void InitGame() {
+		Debug.Log ("Initializing the Game.");
 		//doingSetUp = true;
 
 		//levelImage = GameObject.Find ("Level Image");

@@ -7,9 +7,12 @@ public class LoadNewArea : MonoBehaviour {
 	// used tutorial: [https://www.youtube.com/watch?v=x9lguwc0Pyk&list=PLiyfvmtjWC_X6e0EYLPczO9tNCkm2dzkm&index=9]
 
 	public string levelToLoad;
+	public PlayerController player;
 
 	// Use this for initialization
-	void Start () {}
+	void Start () {
+		player = FindObjectOfType<PlayerController> ();
+	}
 	
 	// Update is called once per frame
 	void Update () {}
@@ -23,6 +26,12 @@ public class LoadNewArea : MonoBehaviour {
 			SceneManager.LoadScene (levelToLoad);
 			sf = GameObject.FindWithTag("Fader").GetComponent<ScreenFader>();
 			sf.FadeToClear (); // from this tutorial: [https://www.youtube.com/watch?v=2XNP6Qf2gDU]
+		}
+
+		if (!player.warpToStart) {
+			player.warpToStart = true;
+		} else if (!player.warpToExit) {
+			player.warpToExit = true;
 		}
 	}
 }

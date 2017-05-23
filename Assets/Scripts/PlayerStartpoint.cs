@@ -12,9 +12,14 @@ public class PlayerStartpoint : MonoBehaviour {
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
 		//camera = FindObjectOfType<CameraController> ();
-
-		player.transform.position = this.transform.position;
-		//camera.transform.position = this.transform.position + camera.offset;
+		if (this.gameObject.tag == "Startpoint" && player.warpToStart) {
+			player.transform.position = this.transform.position;
+			//camera.transform.position = this.transform.position + camera.offset;
+			player.warpToStart = false;
+		} else if (this.gameObject.tag == "Exit" && player.warpToExit) {
+			player.transform.position = this.transform.position;
+			player.warpToExit = false;
+		}
 	}
 	
 	// Update is called once per frame

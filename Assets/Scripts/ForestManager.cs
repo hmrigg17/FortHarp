@@ -22,8 +22,8 @@ public class ForestManager : MonoBehaviour {
 	public int columns = 20;
 	public int rows = 20;
 	public Count obstacleCount = new Count (20,80);
-	//public Count enemyCount = new Count (10, 15);
-	//public GameObject[] enemyTiles;
+	public Count enemyCount = new Count (10, 15);
+	public GameObject[] enemyTiles;
 	public GameObject[] floorTiles;
 	public GameObject[] obstacleTiles;
 	public GameObject[] outerWallTiles;
@@ -56,6 +56,7 @@ public class ForestManager : MonoBehaviour {
 
 	void ForestSetUp () {
 		boardHolder = new GameObject ("ForestMap").transform;
+		Debug.Log ("Forest Map created!");
 		GameObject toInstantiate;
 
 		// generate a random floor
@@ -104,11 +105,10 @@ public class ForestManager : MonoBehaviour {
 	}
 
 	public void SetupScene () {
+		Debug.Log ("Setting up the scene.");
 		ForestSetUp ();
 		InitializeList ();
 		LayoutObjectAtRandom (obstacleTiles, obstacleCount.minimum, obstacleCount.maximum);
-
-		//int enemyCount = (int)Mathf.Log (level, 2f);
-		//LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
+		LayoutObjectAtRandom (enemyTiles, enemyCount.minimum, enemyCount.maximum);
 	}
 }

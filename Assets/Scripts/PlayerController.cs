@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour {
 
 	// Public Variables
 	public float moveSpeed; // The speed at which the player moves
-
+	public bool warpToStart = true;
+	public bool warpToExit = false;
 
 	// Private Variables
 	private Rigidbody2D rb; // The instance of the rigidbody for the player
